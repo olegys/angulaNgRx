@@ -1,0 +1,13 @@
+<div style="text-align: center; padding-top: 200px;">
+  <ng-container *ngIf="count$ | async as state">
+    <div>Current Count: {{ state.count }}</div>
+    <div>Current user: {{ state.username }}</div>
+    <div>Current pass: {{ state.password }}</div>
+  </ng-container>
+
+  <button id="increment" (click)="increment()">Increment</button>
+
+  <button id="decrement" (click)="decrement()">Decrement</button>
+
+  <button id="reset" (click)="reset()">Reset Counter</button>
+</div>
